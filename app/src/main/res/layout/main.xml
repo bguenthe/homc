@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+>
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_led"
+            android:src="@drawable/led"
+            android:layout_marginLeft="41dp"
+            android:layout_marginStart="41dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="28dp"
+            android:longClickable="false"
+            android:nestedScrollingEnabled="true"/>
+
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/LED"
+            android:checked="false"
+            android:layout_span="0"
+            android:layout_marginTop="32dp"
+            android:layout_alignTop="@+id/imageView_led"
+            android:layout_toRightOf="@+id/imageView_relais"
+            android:layout_toEndOf="@+id/imageView_relais"
+            android:layout_marginLeft="61dp"
+            android:layout_marginStart="61dp"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_relais"
+            android:src="@drawable/steckdose"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/imageView_led"
+            android:layout_alignLeft="@+id/imageView_temperature"
+            android:layout_alignStart="@+id/imageView_temperature"
+            android:layout_alignRight="@+id/imageView_led"
+            android:layout_alignEnd="@+id/imageView_led"/>
+
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/relais"
+            android:checked="false"
+            android:layout_alignBottom="@+id/imageView_relais"
+            android:layout_alignLeft="@+id/LED"
+            android:layout_alignStart="@+id/LED"
+            android:layout_marginBottom="35dp"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_temperature"
+            android:src="@drawable/thermometer"
+            android:layout_below="@+id/imageView_led"
+            android:layout_alignLeft="@+id/imageView_led"
+            android:layout_alignStart="@+id/imageView_led"
+            android:layout_marginTop="173dp"
+            android:layout_alignRight="@+id/imageView_led"
+            android:layout_alignEnd="@+id/imageView_led"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/temperature"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignBottom="@+id/imageView_temperature"
+            android:layout_alignLeft="@+id/relais"
+            android:layout_alignStart="@+id/relais"
+            android:layout_marginBottom="40dp"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView_humidity"
+            android:src="@drawable/thermometer"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/imageView_temperature"
+            android:layout_alignStart="@+id/imageView_temperature"
+            android:layout_toStartOf="@+id/LED"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/humidity"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_alignTop="@+id/imageView_humidity"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"/>
+
+
+</RelativeLayout>
+
